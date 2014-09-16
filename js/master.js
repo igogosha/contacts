@@ -1,9 +1,27 @@
 ContactsApp = Backbone.Model.extend({
     initialize: function(){
-        alert("Welcome to this world");
+        $(".loginPage").fadeIn(1000);
+    },
+    
+    autentificate: function(e) {
+        e.stopPropagation();
+        alert('autentificate called!');
     }
     
 });
-var contactsView = Backbone.View.extend({});
+ContactsView = Backbone.View.extend({
+    
+    model: ContactsApp,
+    
+    events: {
+        "click #signIn"         : "act",
+    },
+    
+    act: function() {
+        this.model.autentificate();
+    }
+    
+});
 
-var contacts = new ContactsApp();
+var contacts = new ContactsApp({});
+var view = new ContactsView();

@@ -49,3 +49,13 @@ div.userInfo .footer {
     width:100%;
     
 }
+
+.loginPage {
+    display: none;
+}
+
+.loginPage .loginForm {
+    max-width:600px;
+    margin:0 auto;
+    box-shadow: 3px 2px 5px 0 #777;
+}
