@@ -16,6 +16,13 @@ try {
     $sql="CREATE DATABASE " . DB_NAME;
     if (mysqli_query($con,$sql)) {
         echo "Database ".DB_NAME." created successfully. You will be redirected to home page in 5 seconds";
+        mysqli_select_db($con,DB_NAME);
+        
+        $table_contacts = " CREATE TABLE contacts
+                            
+                            ";
+        mysqli_query($table_contacts);
+        
         header( "Refresh:5; url=/", true, 303);
     } else {
         echo "Error creating database: " . mysqli_error($con);

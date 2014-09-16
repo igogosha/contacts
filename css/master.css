@@ -4,3 +4,48 @@
           border-radius: 0 !important;
 }
 
+.contactImage {
+    max-width:150px;
+}
+
+div.userImage, div userInfo {
+    padding:0 !important;
+}
+
+div.userDetails {
+    padding:1em 0;
+}
+
+div.userDetails ul li {
+    border:none; 
+    border-bottom: thin solid #eee;
+}
+div.userDetails ul li:last-child {
+    border-bottom: none;
+}
+
+div.allContacts {
+    height:411px;
+    overflow-y: scroll;
+}
+
+div.userInfo {
+    height:411px;
+    border:thin solid #ddd;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+div.userInfo {
+    padding: 1em !important;
+}
+
+div.userInfo .footer {
+    position: absolute;
+    bottom:0;
+    border: none;
+    padding: 1em 2em;
+    width:100%;
+    
+}
