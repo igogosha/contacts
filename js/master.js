@@ -1,27 +1,24 @@
-ContactsApp = Backbone.Model.extend({
-    initialize: function(){
-        $(".loginPage").fadeIn(1000);
-    },
-    
-    autentificate: function(e) {
-        e.stopPropagation();
-        alert('autentificate called!');
+var Router = Backbone.Router.extend({
+    routes: {
+        '' : 'home'
     }
-    
 });
-ContactsView = Backbone.View.extend({
+
+var ContactsApp = Backbone.View.extend({
     
-    model: ContactsApp,
+    el: '.contactsApp',
     
-    events: {
-        "click #signIn"         : "act",
-    },
-    
-    act: function() {
-        this.model.autentificate();
+    render: function() {
+        this.$el.html('Some new content here');
     }
     
 });
 
-var contacts = new ContactsApp({});
-var view = new ContactsView();
+var contactsApp = new ContactsApp();
+
+var router = new Router();
+router.on('route:home', function(){
+    contactsApp.render();
+});
+
+Backbone.history.start();

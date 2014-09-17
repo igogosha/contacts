@@ -4,6 +4,10 @@
           border-radius: 0 !important;
 }
 
+body {
+    background: #ffffff url("../img/stacked_circles.png") repeat top left;
+}
+
 .contactImage {
     max-width:150px;
 }
@@ -51,7 +55,16 @@ div.userInfo .footer {
 }
 
 .loginPage {
-    display: none;
+    display:none;
+}
+
+.loginForm {
+    background: transparent url("../img/green_cup.png") repeat top left;
+    color: #ffffff;
+}
+
+.loginForm fieldset legend {
+    color: #ffffff;
 }
 
 .loginPage .loginForm {
